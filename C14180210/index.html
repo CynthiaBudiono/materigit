@@ -2,6 +2,7 @@
     <h2>C14180210</h2>
     <h2>Cynthia Budiono</h2>
     <input type="date" data-date-format="DD MMMM YYYY" id="hari" name="hari">
+    <input type="date" data-date-format="DD MMMM YYYY" id="hari2" name="hari2">
     <button type="button" onclick= "hitung()">Hitung</button>
     <h2 id="hasil"></h2>
     <br>
@@ -9,9 +10,10 @@
     <script>
         function hitung() {
             var tanggal1 = new Date (document.getElementById("hari").value);
+            var tanggal2 = new Date (document.getElementById("hari2").value);
             
             var today = new Date();
-            var result = Math.floor((today - tanggal1) / (1000 * 60 * 60 * 24));
+            var result = Math.floor((tanggal2 - tanggal1) / (1000 * 60 * 60 * 24));
             document.getElementById("hasil").innerHTML = " Selisih : "+ result;
 
         }
